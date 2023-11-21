@@ -20,7 +20,7 @@ export const Cal = () => {
       <div class="display">
         <div class="blue">
           <div class="mobile">
-            <input type="text" value={result}></input>
+            <input type="text" value={result} className="search"></input>
             <div class="button">
               <button
                 onClick={clear}
@@ -35,7 +35,7 @@ export const Cal = () => {
                 CLEAR
               </button>
               <button
-                onClick={backspace}
+                onClick={handleClick}
                 id="backspace"
                 class="btn3d btn btn-default btn-lg"
                 style={{
@@ -44,7 +44,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                C
+                %
               </button>
               <button
                 name="/"
@@ -56,20 +56,22 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                %
+                *
               </button>
 
               <button
                 name="7"
-                onClick={handleClick}
+                id="blue"
+                onClick={backspace}
                 class="btn3d btn btn-default btn-lg"
                 style={{
                   backgroundimage:
                     "linear-gradient(rgb(108, 150, 212),rgb(10, 50, 124))",
                   color: "white",
+                  backgroundColor: "blueviolet",
                 }}
               >
-                7
+                c
               </button>
               <br />
 
@@ -83,7 +85,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                8
+                7
               </button>
               <button
                 name="9"
@@ -95,7 +97,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                9
+                8
               </button>
               <button
                 name="*"
@@ -107,9 +109,10 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                *
+                9
               </button>
               <button
+                id="blue"
                 name="4"
                 onClick={handleClick}
                 class="btn3d btn btn-default btn-lg"
@@ -117,9 +120,10 @@ export const Cal = () => {
                   backgroundimage:
                     "linear-gradient(rgb(108, 150, 212),rgb(10, 50, 124))",
                   color: "white",
+                  backgroundColor: "blueviolet",
                 }}
               >
-                4
+                -
               </button>
               <br />
 
@@ -133,7 +137,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                5
+                4
               </button>
               <button
                 name="6"
@@ -145,7 +149,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                6
+                5
               </button>
               <button
                 name="-"
@@ -157,9 +161,10 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                -
+                6
               </button>
               <button
+                id="blue"
                 name="1"
                 onClick={handleClick}
                 class="btn3d btn btn-default btn-lg"
@@ -167,9 +172,10 @@ export const Cal = () => {
                   backgroundimage:
                     "linear-gradient(rgb(108, 150, 212),rgb(10, 50, 124))",
                   color: "white",
+                  backgroundColor: "blueviolet",
                 }}
               >
-                1
+                +
               </button>
               <br />
 
@@ -183,7 +189,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                2
+                1
               </button>
               <button
                 name="3"
@@ -195,7 +201,7 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                3
+                2
               </button>
               <button
                 name="+"
@@ -207,16 +213,18 @@ export const Cal = () => {
                   color: "white",
                 }}
               >
-                +
+                3
               </button>
               <button
                 name="0"
+                id="blue"
                 onClick={handleClick}
                 class="btn3d btn btn-default btn-lg"
                 style={{
                   backgroundimage:
                     "linear-gradient(rgb(17, 17, 17),rgb(44, 42, 42))",
                   color: "black",
+                  backgroundColor: "blueviolet",
                 }}
               >
                 0
